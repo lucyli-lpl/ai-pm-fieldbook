@@ -1,0 +1,22 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Node (预留给未来的 skill / 工具)
+node_modules/
+npm-debug.log*
+
+# Python (预留)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 临时文件
+*.tmp
+*.bak
