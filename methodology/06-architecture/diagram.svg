@@ -1,0 +1,77 @@
+<svg viewBox="0 0 780 420" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+  <style>
+    text { fill: #1a1a1a; }
+    .label { font-size: 13px; font-weight: 500; }
+    .small { font-size: 11px; fill: #6b7280; }
+    .title { font-size: 15px; font-weight: 700; }
+    .q { font-size: 12px; font-weight: 500; }
+  </style>
+
+  <text x="390" y="28" text-anchor="middle" class="title">架构选择：三刀决策树</text>
+
+  <!-- Cut 0 -->
+  <rect x="240" y="46" width="300" height="36" rx="4" fill="#1a1a1a"/>
+  <text x="390" y="70" text-anchor="middle" fill="#fafaf7" class="label">第零刀：是不是架构问题？</text>
+
+  <line x1="390" y1="82" x2="390" y2="102" stroke="#1a1a1a" stroke-width="1.5"/>
+
+  <rect x="220" y="102" width="340" height="32" rx="4" fill="#e5e7eb"/>
+  <text x="390" y="124" text-anchor="middle" class="q">失败在流程走向，还是某一步执行质量？</text>
+
+  <!-- Branch: execution quality -->
+  <line x1="560" y1="118" x2="680" y2="118" stroke="#6b7280" stroke-width="1"/>
+  <text x="575" y="113" class="small">执行质量</text>
+  <rect x="620" y="104" width="120" height="28" rx="4" fill="none" stroke="#6b7280"/>
+  <text x="680" y="124" text-anchor="middle" class="label" fill="#6b7280">→ Skill</text>
+
+  <!-- Branch: flow direction -->
+  <line x1="390" y1="134" x2="390" y2="162" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="398" y="152" class="small">流程走向</text>
+  <polygon points="386,158 394,158 390,166" fill="#1a1a1a"/>
+
+  <!-- Cut 1 -->
+  <rect x="220" y="166" width="340" height="32" rx="4" fill="#e5e7eb"/>
+  <text x="390" y="188" text-anchor="middle" class="q">第一刀：步骤由谁决定？</text>
+
+  <!-- Branch: known -->
+  <line x1="220" y1="182" x2="120" y2="182" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="125" y="177" class="small">人已知步骤</text>
+  <line x1="120" y1="182" x2="120" y2="210" stroke="#1a1a1a" stroke-width="1"/>
+
+  <rect x="40" y="210" width="160" height="28" rx="4" fill="none" stroke="#1a1a1a"/>
+  <text x="120" y="230" text-anchor="middle" class="label">→ Workflow</text>
+  <text x="120" y="252" text-anchor="middle" class="small">代码决定下一步</text>
+
+  <!-- Branch: model decides -->
+  <line x1="560" y1="182" x2="660" y2="182" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="575" y="177" class="small">模型临场想</text>
+  <line x1="660" y1="182" x2="660" y2="210" stroke="#1a1a1a" stroke-width="1"/>
+
+  <!-- Cut 2 -->
+  <rect x="560" y="210" width="200" height="32" rx="4" fill="#e5e7eb"/>
+  <text x="660" y="232" text-anchor="middle" class="q">第二刀：谁定下一步？</text>
+
+  <line x1="600" y1="242" x2="600" y2="276" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="580" y="262" class="small">代码</text>
+  <rect x="520" y="276" width="160" height="28" rx="4" fill="none" stroke="#1a1a1a"/>
+  <text x="600" y="296" text-anchor="middle" class="label">→ Workflow</text>
+
+  <line x1="720" y1="242" x2="720" y2="276" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="728" y="262" class="small">AI</text>
+  <rect x="680" y="276" width="100" height="28" rx="4" fill="none" stroke="#1a1a1a"/>
+  <text x="730" y="296" text-anchor="middle" class="label">→ Agent</text>
+
+  <!-- Priority ladder at bottom -->
+  <rect x="60" y="330" width="660" height="56" rx="4" fill="none" stroke="#e5e7eb"/>
+  <text x="390" y="352" text-anchor="middle" class="label">干预手段优先级（从轻到重）</text>
+  <text x="140" y="374" text-anchor="middle" class="small">Skill</text>
+  <text x="210" y="374" text-anchor="middle" class="small">→</text>
+  <text x="300" y="374" text-anchor="middle" class="small">System Prompt</text>
+  <text x="390" y="374" text-anchor="middle" class="small">→</text>
+  <text x="480" y="374" text-anchor="middle" class="small">Workflow</text>
+  <text x="540" y="374" text-anchor="middle" class="small">→</text>
+  <text x="610" y="374" text-anchor="middle" class="small">Agent</text>
+
+  <!-- Bottom note -->
+  <text x="390" y="410" text-anchor="middle" class="small">企业场景：自主性能少则少 · 核心区用 workflow，边缘区才需模型推理</text>
+</svg>

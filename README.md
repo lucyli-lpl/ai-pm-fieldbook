@@ -61,9 +61,25 @@
 
 ## 目录
 
-- [`methodology/00-capability-boundary-methodology.md`](methodology/00-capability-boundary-methodology.md) —— 方法论正文（当前 v2.1）
+### 完整版
 
-> 后续规划：将正文拆分为分章文件，并配套可复用的模板库（能力边界母表、验收规范表、badcase 分类体系）与 Claude Skill 组合，让方法论"按需加载、轻量使用"。欢迎关注迭代。
+- [`methodology/FULL.md`](methodology/FULL.md) —— 方法论完整版（v2.1）
+
+### 模块版（推荐按需阅读）
+
+| # | 模块 | 一句话 |
+|---|------|--------|
+| 01 | [能力三区 = 三种产品承诺](methodology/01-three-zones/) | 核心内核 + AI 产品观 |
+| 02 | [复杂场景判区与场景库](methodology/02-zoning-complex-scenarios/) | 判区决策树 + 三区特征表 + 应用类型变体 |
+| 03 | [测试与验收](methodology/03-testing/) | ADLC、四层结构、S0/S1/S2 × L1/L2/L3 |
+| 04 | [数据运营](methodology/04-data-ops/) | 五步闭环、error analysis、归因派单 |
+| 05 | [生成把关：prompt 与 skill](methodology/05-generation-control/) | system prompt vs skill 分层 |
+| 06 | [架构选择](methodology/06-architecture/) | 三刀决策树：skill → workflow → agent |
+| 07 | [生产护栏与可靠性](methodology/07-guardrails/) | 三层护栏 + 可靠性三件套 + HITL |
+| 08 | [AI PM 交付流程](methodology/08-delivery-workflow/) | 从 PRD 到验收（尚未成文） |
+
+- [`methodology/CHANGELOG.yaml`](methodology/CHANGELOG.yaml) —— 版本迭代记录（v1 → v2.1）
+- [`methodology/README-reading-guide.md`](methodology/README-reading-guide.md) —— 分阶段阅读指南
 
 ---
 

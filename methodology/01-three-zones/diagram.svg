@@ -1,0 +1,60 @@
+<svg viewBox="0 0 780 360" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+  <style>
+    text { fill: #1a1a1a; }
+    .label { font-size: 13px; font-weight: 500; }
+    .small { font-size: 11px; fill: #6b7280; }
+    .title { font-size: 15px; font-weight: 700; }
+  </style>
+
+  <!-- Title -->
+  <text x="390" y="30" text-anchor="middle" class="title">能力三区 × 三种产品承诺</text>
+
+  <!-- Three zones -->
+  <rect x="40" y="60" width="220" height="240" rx="4" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+  <rect x="280" y="60" width="220" height="240" rx="4" fill="none" stroke="#1a1a1a" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <rect x="520" y="60" width="220" height="240" rx="4" fill="none" stroke="#6b7280" stroke-width="1"/>
+
+  <!-- Zone headers -->
+  <rect x="40" y="60" width="220" height="36" rx="4" fill="#1a1a1a"/>
+  <text x="150" y="84" text-anchor="middle" fill="#fafaf7" class="label">核心区</text>
+
+  <rect x="280" y="60" width="220" height="36" rx="4" fill="#e5e7eb"/>
+  <text x="390" y="84" text-anchor="middle" class="label">边缘区</text>
+
+  <rect x="520" y="60" width="220" height="36" rx="4" fill="#e5e7eb"/>
+  <text x="630" y="84" text-anchor="middle" class="label">界外区</text>
+
+  <!-- Zone content -->
+  <text x="150" y="125" text-anchor="middle" class="label">保证结果</text>
+  <text x="150" y="150" text-anchor="middle" class="small">稳定、完整地完成</text>
+  <line x1="80" y1="168" x2="220" y2="168" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="150" y="190" text-anchor="middle" class="small">判区看：路径明确</text>
+  <text x="150" y="208" text-anchor="middle" class="small">+ 产品承诺</text>
+  <line x1="80" y1="226" x2="220" y2="226" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="150" y="248" text-anchor="middle" class="small">验收看：结果正确</text>
+  <text x="150" y="266" text-anchor="middle" class="small">完整、稳定</text>
+
+  <text x="390" y="125" text-anchor="middle" class="label">保证处理</text>
+  <text x="390" y="150" text-anchor="middle" class="small">不保证完整完成</text>
+  <text x="390" y="168" text-anchor="middle" class="small">但保证正确处理</text>
+  <line x1="320" y1="186" x2="460" y2="186" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="390" y="208" text-anchor="middle" class="small">判区看：有业务相关</text>
+  <text x="390" y="226" text-anchor="middle" class="small">但无稳定完成路径</text>
+  <line x1="320" y1="244" x2="460" y2="244" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="390" y="266" text-anchor="middle" class="small">验收看：完整处理率</text>
+  <text x="390" y="284" text-anchor="middle" class="small">+ 正确降级率</text>
+
+  <text x="630" y="125" text-anchor="middle" class="label">保证边界</text>
+  <text x="630" y="150" text-anchor="middle" class="small">不解决该需求</text>
+  <text x="630" y="168" text-anchor="middle" class="small">但正确识别和承接</text>
+  <line x1="560" y1="186" x2="700" y2="186" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="630" y="208" text-anchor="middle" class="small">判区看：不属于</text>
+  <text x="630" y="226" text-anchor="middle" class="small">产品能力或禁止</text>
+  <line x1="560" y1="244" x2="700" y2="244" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="630" y="266" text-anchor="middle" class="small">验收看：动作匹配</text>
+  <text x="630" y="284" text-anchor="middle" class="small">+ 边界表达正确性</text>
+
+  <!-- Bottom note -->
+  <text x="390" y="335" text-anchor="middle" class="small">判区看应然（路径 + 承诺）  ·  验收看实然（实测达没达标）</text>
+  <text x="390" y="353" text-anchor="middle" class="small">表现浮动改变的是"达没达标"，不改变"属于哪个区"</text>
+</svg>

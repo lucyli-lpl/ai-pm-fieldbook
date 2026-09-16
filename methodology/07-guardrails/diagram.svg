@@ -1,0 +1,88 @@
+<svg viewBox="0 0 780 400" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+  <style>
+    text { fill: #1a1a1a; }
+    .label { font-size: 13px; font-weight: 500; }
+    .small { font-size: 11px; fill: #6b7280; }
+    .title { font-size: 15px; font-weight: 700; }
+    .guard { font-size: 12px; font-weight: 600; }
+  </style>
+
+  <text x="390" y="28" text-anchor="middle" class="title">三层护栏 + 三个可靠性机制</text>
+
+  <!-- Pipeline -->
+  <text x="60" y="72" class="label">请求流：</text>
+
+  <rect x="120" y="56" width="80" height="28" rx="4" fill="#e5e7eb"/>
+  <text x="160" y="76" text-anchor="middle" class="small">用户输入</text>
+
+  <line x1="200" y1="70" x2="230" y2="70" stroke="#6b7280"/>
+
+  <!-- Guard 1 -->
+  <rect x="230" y="52" width="110" height="36" rx="4" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="285" y="75" text-anchor="middle" class="guard">① 输入护栏</text>
+
+  <line x1="340" y1="70" x2="370" y2="70" stroke="#6b7280"/>
+
+  <rect x="370" y="52" width="120" height="36" rx="4" fill="#1a1a1a"/>
+  <text x="430" y="75" text-anchor="middle" fill="#fafaf7" class="label">核心处理</text>
+
+  <line x1="490" y1="70" x2="520" y2="70" stroke="#6b7280"/>
+
+  <!-- Guard 2 -->
+  <rect x="520" y="52" width="110" height="36" rx="4" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="575" y="75" text-anchor="middle" class="guard">② 输出护栏</text>
+
+  <line x1="630" y1="70" x2="660" y2="70" stroke="#6b7280"/>
+
+  <!-- Guard 3 -->
+  <rect x="660" y="52" width="100" height="36" rx="4" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="710" y="75" text-anchor="middle" class="guard">③ 流程护栏</text>
+
+  <!-- Guard descriptions -->
+  <text x="285" y="112" text-anchor="middle" class="small">拦注入 / 越权</text>
+  <text x="285" y="128" text-anchor="middle" class="small">防"不该进来的"</text>
+  <line x1="285" y1="88" x2="285" y2="98" stroke="#6b7280" stroke-dasharray="3,2"/>
+
+  <text x="575" y="112" text-anchor="middle" class="small">S0 断言实时跑</text>
+  <text x="575" y="128" text-anchor="middle" class="small">防"不该出去的"</text>
+  <line x1="575" y1="88" x2="575" y2="98" stroke="#6b7280" stroke-dasharray="3,2"/>
+
+  <text x="710" y="112" text-anchor="middle" class="small">不可逆操作前确认</text>
+  <text x="710" y="128" text-anchor="middle" class="small">防"不该做的"</text>
+  <line x1="710" y1="88" x2="710" y2="98" stroke="#6b7280" stroke-dasharray="3,2"/>
+
+  <!-- Divider -->
+  <line x1="60" y1="155" x2="720" y2="155" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="390" y="180" text-anchor="middle" class="label">可靠性三件套（agent 自救机制）</text>
+
+  <!-- Mechanism 1 -->
+  <rect x="60" y="200" width="200" height="90" rx="4" fill="none" stroke="#1a1a1a"/>
+  <text x="160" y="224" text-anchor="middle" class="guard">① Ground Truth</text>
+  <text x="80" y="248" class="small">每步从环境取真实反馈</text>
+  <text x="80" y="266" class="small">能拿到 → 可自主</text>
+  <text x="80" y="284" class="small">拿不到 → 加人工兜底</text>
+
+  <!-- Mechanism 2 -->
+  <rect x="290" y="200" width="200" height="90" rx="4" fill="none" stroke="#1a1a1a"/>
+  <text x="390" y="224" text-anchor="middle" class="guard">② Verification Loop</text>
+  <text x="310" y="248" class="small">确定性工具验证 &gt; 最优</text>
+  <text x="310" y="266" class="small">独立模型验证 &gt; 其次</text>
+  <text x="310" y="284" class="small">人工抽检 &gt; 兜底</text>
+
+  <!-- Mechanism 3 -->
+  <rect x="520" y="200" width="200" height="90" rx="4" fill="none" stroke="#1a1a1a"/>
+  <text x="620" y="224" text-anchor="middle" class="guard">③ Human-in-the-Loop</text>
+  <text x="540" y="248" class="small">高风险动作：人审批</text>
+  <text x="540" y="266" class="small">低风险动作：人抽检</text>
+  <text x="540" y="284" class="small">HITL 设计在流程里</text>
+
+  <!-- Arrows between mechanisms -->
+  <line x1="260" y1="245" x2="290" y2="245" stroke="#6b7280" stroke-width="1"/>
+  <polygon points="286,241 286,249 294,245" fill="#6b7280"/>
+  <line x1="490" y1="245" x2="520" y2="245" stroke="#6b7280" stroke-width="1"/>
+  <polygon points="516,241 516,249 524,245" fill="#6b7280"/>
+
+  <!-- Bottom note -->
+  <text x="390" y="330" text-anchor="middle" class="small">护栏是 workflow 的独立节点，不是 prompt 里的一句话</text>
+  <text x="390" y="350" text-anchor="middle" class="small">S0 断言 = 测试工具 → 生产护栏（同一套规则，两个用途）</text>
+</svg>

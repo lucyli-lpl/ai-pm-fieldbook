@@ -1,0 +1,38 @@
+<svg viewBox="0 0 780 260" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+  <style>
+    text { fill: #1a1a1a; }
+    .label { font-size: 13px; font-weight: 500; }
+    .small { font-size: 11px; fill: #6b7280; }
+    .title { font-size: 15px; font-weight: 700; }
+  </style>
+
+  <text x="390" y="28" text-anchor="middle" class="title">AI PM 交付流程（预留）</text>
+
+  <!-- Timeline -->
+  <line x1="80" y1="80" x2="700" y2="80" stroke="#e5e7eb" stroke-width="2"/>
+
+  <!-- Step 1 -->
+  <circle cx="140" cy="80" r="6" fill="#1a1a1a"/>
+  <text x="140" y="110" text-anchor="middle" class="label">需求分析</text>
+  <text x="140" y="128" text-anchor="middle" class="small">能力边界母表</text>
+
+  <!-- Step 2 -->
+  <circle cx="300" cy="80" r="6" fill="#1a1a1a"/>
+  <text x="300" y="110" text-anchor="middle" class="label">PRD</text>
+  <text x="300" y="128" text-anchor="middle" class="small">场景 × 三区定义</text>
+
+  <!-- Step 3 -->
+  <circle cx="460" cy="80" r="6" fill="#1a1a1a"/>
+  <text x="460" y="110" text-anchor="middle" class="label">UI-SPEC</text>
+  <text x="460" y="128" text-anchor="middle" class="small">交互 + prompt 设计</text>
+
+  <!-- Step 4 -->
+  <circle cx="620" cy="80" r="6" fill="#6b7280"/>
+  <text x="620" y="110" text-anchor="middle" class="label">验收</text>
+  <text x="620" y="128" text-anchor="middle" class="small">验收规范表</text>
+
+  <!-- Placeholder note -->
+  <rect x="200" y="165" width="380" height="50" rx="4" fill="none" stroke="#e5e7eb" stroke-dasharray="6,3"/>
+  <text x="390" y="190" text-anchor="middle" class="small">本模块尚未成文</text>
+  <text x="390" y="208" text-anchor="middle" class="small">将涵盖 AI PM 从需求到交付的完整工作流</text>
+</svg>

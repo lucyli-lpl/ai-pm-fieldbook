@@ -1,0 +1,74 @@
+<svg viewBox="0 0 780 380" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+  <style>
+    text { fill: #1a1a1a; }
+    .label { font-size: 13px; font-weight: 500; }
+    .small { font-size: 11px; fill: #6b7280; }
+    .title { font-size: 15px; font-weight: 700; }
+    .num { font-size: 16px; font-weight: 700; }
+  </style>
+
+  <text x="390" y="30" text-anchor="middle" class="title">数据运营五步闭环</text>
+
+  <!-- Circle layout for 5 steps -->
+  <!-- Step 0: entry -->
+  <rect x="250" y="50" width="280" height="36" rx="4" fill="#1a1a1a"/>
+  <text x="390" y="74" text-anchor="middle" fill="#fafaf7" class="label">起点：先做 error analysis</text>
+
+  <line x1="390" y1="86" x2="390" y2="108" stroke="#1a1a1a" stroke-width="1.5"/>
+  <polygon points="386,104 394,104 390,112" fill="#1a1a1a"/>
+
+  <!-- Step 1 -->
+  <rect x="60" y="110" width="280" height="44" rx="4" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="80" y="130" class="num">①</text>
+  <text x="110" y="130" class="label">监控什么指标</text>
+  <text x="110" y="146" class="small">每个指标对应一类真实失败</text>
+
+  <!-- Step 2 -->
+  <rect x="440" y="110" width="280" height="44" rx="4" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="460" y="130" class="num">②</text>
+  <text x="490" y="130" class="label">数据怎么来</text>
+  <text x="490" y="146" class="small">点踩 + 埋点 + 后台打标</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="340" y1="132" x2="440" y2="132" stroke="#6b7280" stroke-width="1"/>
+  <polygon points="436,128 436,136 444,132" fill="#6b7280"/>
+
+  <!-- Step 3 -->
+  <rect x="60" y="190" width="660" height="44" rx="4" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="80" y="210" class="num">③</text>
+  <text x="110" y="210" class="label">怎么分析</text>
+  <text x="110" y="226" class="small">按母表打标 → 数频次 → error analysis 找模式 → 归因</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="580" y1="154" x2="580" y2="190" stroke="#6b7280" stroke-width="1"/>
+  <polygon points="576,186 584,186 580,194" fill="#6b7280"/>
+
+  <!-- Step 4 -->
+  <rect x="60" y="270" width="280" height="44" rx="4" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="80" y="290" class="num">④</text>
+  <text x="110" y="290" class="label">怎么优化</text>
+  <text x="110" y="306" class="small">归因派单 · 高频边缘迁核心</text>
+
+  <!-- Step 5 -->
+  <rect x="440" y="270" width="280" height="44" rx="4" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="460" y="290" class="num">⑤</text>
+  <text x="490" y="290" class="label">怎么确认优化了</text>
+  <text x="490" y="306" class="small">指标降没降 + 看趋势</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="200" y1="234" x2="200" y2="270" stroke="#6b7280" stroke-width="1"/>
+  <polygon points="196,266 204,266 200,274" fill="#6b7280"/>
+
+  <!-- Arrow 4→5 -->
+  <line x1="340" y1="292" x2="440" y2="292" stroke="#6b7280" stroke-width="1"/>
+  <polygon points="436,288 436,296 444,292" fill="#6b7280"/>
+
+  <!-- Loop arrow 5→0 -->
+  <path d="M 720 292 C 750 292 750 72 530 72" fill="none" stroke="#1a1a1a" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <polygon points="534,68 534,76 526,72" fill="#1a1a1a"/>
+  <text x="745" y="180" class="small" transform="rotate(90, 745, 180)">循环</text>
+
+  <!-- Bottom note -->
+  <text x="390" y="350" text-anchor="middle" class="small">母表 = 单一事实源：测试拿它当验收标准，运营拿它当打标字典</text>
+  <text x="390" y="368" text-anchor="middle" class="small">指标从真实失败里长出来，不凭空定义</text>
+</svg>

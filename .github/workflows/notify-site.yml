@@ -1,0 +1,29 @@
+name: Notify site to rebuild
+
+# 内容仓库有推送时，通知 lucyli-lpl.github.io 重新构建。
+# 需要在本仓库 Settings → Secrets → Actions 配置 SITE_DISPATCH_TOKEN
+#（fine-grained PAT，仅授权 lucyli-lpl.github.io 仓库，Contents: Read and write）。
+# 未配置时本 workflow 直接跳过，不会报错；站点仍会按每日定时任务重建。
+
+on:
+  push:
+    branches: [main, master]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    env:
+      TOKEN: ${{ secrets.SITE_DISPATCH_TOKEN }}
+    steps:
+      - name: Skip (SITE_DISPATCH_TOKEN not configured)
+        if: env.TOKEN == ''
+        run: echo "SITE_DISPATCH_TOKEN not set — skipping dispatch; site will rebuild on its daily schedule."
+
+      - name: Dispatch content-updated to site repo
+        if: env.TOKEN != ''
+        run: |
+          curl -sS --fail-with-body -X POST \
+            -H "Authorization: Bearer $TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/lucyli-lpl/lucyli-lpl.github.io/dispatches \
+            -d '{"event_type":"content-updated","client_payload":{"repo":"${{ github.repository }}","sha":"${{ github.sha }}"}}'

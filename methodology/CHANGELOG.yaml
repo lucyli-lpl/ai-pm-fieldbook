@@ -1,0 +1,118 @@
+# trigger 取值：project（项目复盘）| reading（精读落地）| discussion（讨论校正）| internal（自我梳理）
+# trigger_ref 可选：触发源的具体名称（复盘/文章名），站点侧栏优先展示它
+# 标 TODO 的条目是按 summary 推断的，待作者确认
+
+- version: "2.1"
+  date: 2026-09
+  summary: 补齐 prompt 体系分层、架构选择前置判断、生产护栏与可靠性
+  modules: [5, 6, 7]
+  trigger: internal  # TODO 确认：护栏/架构这批内容是否来自某个项目？
+  details: |
+    5.3.6 新增「Skill：场景化按需加载的 prompt」：定义 skill 为"场景化按需加载的 prompt"；区分 skill/MCP/plugin；给出适用条件与分工原则。
+    5.4 架构选择新增「第零刀」：改架构前先排除 skill——干预手段优先级 skill→system prompt→workflow/agent。
+    5.4.5 新增「错误代价×可检测性矩阵」：给每个动作按"错误代价×可检测性"分别定级。
+    5.4.6 新增「能力不足时缩范围不加编排」。
+    5.5 新增「生产护栏与可靠性」：三层护栏（输入/输出/流程）、三个可靠性机制、human-in-the-loop 三阶段路径。
+
+- version: "2.0"
+  date: 2026-09
+  summary: Anthropic Prompt Engineering 精读落地 + 里程碑收尾
+  modules: [1, 5, 6]
+  trigger: reading
+  trigger_ref: Anthropic Prompt Engineering 官方文档精读
+  details: |
+    5.3 生成把关：框架标准先于测试题、prompt 非万能药（归因到"哪一段 prompt"）、提示词技术阶梯、system prompt 五层 + 8 条把关清单、详略分寸。
+    5.4 架构选择：CoT vs workflow vs agent 的两刀判断、企业场景自主性能少则少。
+    新增第六章「AI 产品观」：AI 产品是一连串 tradeoff、核心工作是把模糊能力规定成清晰承诺、能力边界母表要尽早。
+
+- version: "1.9"
+  date:
+  summary: 追问部分新增两种澄清方式（结构化澄清 vs 推理式澄清）
+  modules: [1]
+  trigger: internal  # TODO 确认：推理式澄清是否由真实场景触发？
+  details: |
+    当不确定性来自"语义多义"而非"具体字段缺失"时，须用推理式澄清（AI 临场生成分支，无需预定义字段）。纠正技术常见误区"语义多义无法追问"。
+
+- version: "1.8"
+  date:
+  summary: 重组 Ch5，从"落地三视角"改为"测试 + 数据运营"双阶段（ADLC）
+  modules: [3, 4]
+  trigger: internal
+  details: |
+    明确 L1/L2/L3 是测试手段，不是数据运营工具；测试与运营按"时机/数据/目的/核心能力"四线区分。
+    5.2 数据运营独立成"数据流"大节（十子节）：五步闭环+起点前置、先窄起步、三源分工、点踩设计原则、后台打标+分类器版本化、行为信号、信号价值分级、error analysis 引擎、归因派单、隐私治理。
+
+- version: "1.7"
+  date:
+  summary: 新增 error analysis 操作流程（Day3 精读落地）
+  modules: [4]
+  trigger: reading
+  trigger_ref: Hamel evals 系列 Day3 精读
+  details: |
+    open coding→axial coding→理论饱和四步；三个延伸洞察：起点破环、人机分工、演绎×归纳互补；嵌入「两轮测试」的完整流程。
+
+- version: "1.6"
+  date:
+  summary: 三处地基校正（真实项目动手前复盘）
+  modules: [1, 3]
+  trigger: project
+  trigger_ref: 真实项目动手前复盘
+  details: |
+    判区与验收解耦：核心区是应然承诺，表现浮动不改变区域归属。
+    路由降级：路由不构成独立场景，改为三身份（动作/归因/trace 观察切面）。
+    命名清理：严重度统一 S0/S1/S2，评测手段保留 L1/L2/L3。
+
+- version: "1.5"
+  date:
+  summary: 厘清验收视角的总结构——四层结构图 + 三轴交叉
+  modules: [3]
+  trigger: internal  # TODO 确认：四层结构图是复盘产物还是纯梳理？
+  details: |
+    5.1 开篇加四层结构图（期望→判定→应然/实然→决策）+ 三轴交叉 + 验收规范表样例。
+    关键澄清「判定层 vs 决策层」分离。严重度（应然）与聚合指标（实然）的区分。
+    新增 5.1.6 决策层心法。
+
+- version: "1.4"
+  date:
+  summary: 完成 Hamel 全文精读（L2/L3）并结合真实项目落地
+  modules: [3, 4]
+  trigger: reading
+  trigger_ref: Hamel《Your AI Product Needs Evals》全文精读
+  details: |
+    三层评测补齐 L3 定位。新增 5.1.5「PM 职责边界」。
+    5.2 监控视角回填 L2 方法、L3 行为/结果信号埋点、冷启动数据策略、归因靠基础设施。
+
+- version: "1.3"
+  date:
+  summary: 精读 Hamel《Your AI Product Needs Evals》并结合真实项目落地
+  modules: [3]
+  trigger: reading
+  trigger_ref: Hamel《Your AI Product Needs Evals》精读
+  details: |
+    评测三层按「判定方式→能测的问题种类」区分；断言的本质 + PM「抽骨头留肉」；
+    L1 落地三步；通过率定法。
+
+- version: "1.2"
+  date:
+  summary: 经真实项目讨论校正——三区升级为三种产品承诺
+  modules: [1, 2]
+  trigger: project
+  trigger_ref: 真实项目讨论校正
+  details: |
+    核心区加入准确率/召回率/重复一致性要求；边缘区同时观察完整处理与安全降级；
+    明确模糊/多意图/复杂问题不天然属于某一区域；增加交叉知识判定规则；
+    界外区验收改为"动作匹配度 + 边界表达正确性"。
+
+- version: "1.1"
+  date:
+  summary: 拆分场景、动作、归因，引入两套坐标系
+  modules: [1, 2]
+  trigger: internal
+  details: |
+    引入能力三区与处理链路两套坐标系；将路由和意图切换从界外区移出。
+
+- version: "1"
+  date:
+  summary: 形成三区、动作和三视角骨架
+  modules: [1]
+  trigger: internal

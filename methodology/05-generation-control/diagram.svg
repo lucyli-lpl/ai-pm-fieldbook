@@ -1,0 +1,49 @@
+<svg viewBox="0 0 780 340" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+  <style>
+    text { fill: #1a1a1a; }
+    .label { font-size: 13px; font-weight: 500; }
+    .small { font-size: 11px; fill: #6b7280; }
+    .title { font-size: 15px; font-weight: 700; }
+  </style>
+
+  <text x="390" y="30" text-anchor="middle" class="title">prompt 体系两层结构：system prompt + skill</text>
+
+  <!-- System prompt layer -->
+  <rect x="60" y="55" width="660" height="100" rx="4" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="80" y="78" class="label">System Prompt（全局层 · 常驻）</text>
+  <text x="100" y="100" class="small">角色身份</text>
+  <text x="220" y="100" class="small">能力声明</text>
+  <text x="340" y="100" class="small">全局判断规则</text>
+  <text x="510" y="100" class="small">S0 红线</text>
+  <text x="620" y="100" class="small">语气基调</text>
+
+  <!-- Skill index -->
+  <rect x="80" y="115" width="620" height="28" rx="4" fill="#e5e7eb"/>
+  <text x="390" y="134" text-anchor="middle" class="small">Skill 索引：skill:查流程 | skill:找模板 | skill:兜底处理 | skill:... （各一行触发描述）</text>
+
+  <!-- Arrow down -->
+  <text x="390" y="175" text-anchor="middle" class="small">命中场景时按需加载 ↓</text>
+
+  <!-- Skill layer -->
+  <rect x="120" y="190" width="180" height="110" rx="4" fill="none" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="6,3"/>
+  <text x="210" y="212" text-anchor="middle" class="label">skill:查流程</text>
+  <text x="140" y="234" class="small">1. 匹配知识库</text>
+  <text x="140" y="252" class="small">2. 查 ITSM 入口</text>
+  <text x="140" y="270" class="small">3. 组装回复</text>
+  <text x="140" y="288" class="small">输出规范 · 边界</text>
+
+  <rect x="330" y="190" width="180" height="110" rx="4" fill="none" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="6,3"/>
+  <text x="420" y="212" text-anchor="middle" class="label">skill:兜底处理</text>
+  <text x="350" y="234" class="small">1. 确认兜底依据</text>
+  <text x="350" y="252" class="small">2. 回复结构</text>
+  <text x="350" y="270" class="small">3. 分情况处理</text>
+  <text x="350" y="288" class="small">语气要点 · 禁止</text>
+
+  <rect x="540" y="190" width="160" height="110" rx="4" fill="none" stroke="#6b7280" stroke-width="1" stroke-dasharray="6,3"/>
+  <text x="620" y="212" text-anchor="middle" class="label" fill="#6b7280">skill:...</text>
+  <text x="560" y="240" class="small">按需扩展</text>
+  <text x="560" y="258" class="small">一 skill 一场景</text>
+
+  <!-- Bottom -->
+  <text x="390" y="328" text-anchor="middle" class="small">分工口诀：system prompt 管"什么时候走这条路" · skill 管"走上这条路后怎么走"</text>
+</svg>
