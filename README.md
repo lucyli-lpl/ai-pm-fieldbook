@@ -79,6 +79,8 @@
 | 08 | [AI PM 交付流程](methodology/08-delivery-workflow/) | 从 PRD 到验收（尚未成文） |
 
 - [`methodology/CHANGELOG.yaml`](methodology/CHANGELOG.yaml) —— 版本迭代记录（v1 → v2.1）
+- [`retros/`](retros/) —— 项目复盘（与方法论双向链接）
+- [`WRITING.md`](WRITING.md) —— **内容格式约定**（站点自动渲染依赖这些字段）
 - [`methodology/README-reading-guide.md`](methodology/README-reading-guide.md) —— 分阶段阅读指南
 
 ---
