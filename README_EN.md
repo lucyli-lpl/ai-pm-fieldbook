@@ -79,4 +79,4 @@ If you've used this in your own project and found something that doesn't hold up
 
 ## License
 
-[MIT](LICENSE) © D1One-hue
+[MIT](LICENSE) © Lucy Li

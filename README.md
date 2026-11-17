@@ -95,4 +95,4 @@
 
 ## License
 
-[MIT](LICENSE) © D1One-hue
+[MIT](LICENSE) © Lucy Li
